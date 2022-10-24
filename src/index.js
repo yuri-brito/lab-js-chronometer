@@ -28,8 +28,11 @@ function printSeconds() {
 }
 
 function printCentiseconds() {
-  centisecUni.innerHTML = chronometer.computeTwoDigitNumber(chronometer.getCentiseconds())[1];
-  centisecDec.innerHTML = chronometer.computeTwoDigitNumber(chronometer.getCentiseconds())[0];
+  if (chronometer.getCentiseconds){
+    centisecUni.innerHTML = chronometer.computeTwoDigitNumber(chronometer.getCentiseconds())[1];
+    centisecDec.innerHTML = chronometer.computeTwoDigitNumber(chronometer.getCentiseconds())[0];
+  }
+  
 }
 
 function printSplit() {
